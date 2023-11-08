@@ -1,0 +1,158 @@
+.discoverContainer {
+  height: 100vh;
+  max-height: 800px;
+  min-height: 650px;
+  width: 100%;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.primaryContainer_Color,
+.secondaryContainer_Color {
+  flex: 1;
+}
+
+.primaryContainer_Color,
+.secondaryContainer_Color,
+.transtionAnimation {
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.primaryContainer_Content,
+.secondaryContainer_Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mainContainer {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.secondaryContainer_Content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding: 2rem 1rem; */
+  height: 100%;
+  gap: 20px;
+  align-items: flex-end;
+}
+.secondaryContainer_Content .title,
+.secondaryContainer_Content .buttons {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.secondaryContainer_Content .image {
+  flex: 5;
+  width: 100%;
+  height: 250px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  margin-right: 50px;
+}
+.secondaryContainer_Content .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainContainer {
+    position: relative;
+    flex-direction: column;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+  }
+  .discoverContainer {
+    max-height: none;
+    height: auto;
+    padding-bottom: 25px;
+  }
+  .secondaryContainer_Content .image {
+    margin-right: 0;
+  }
+  .secondaryContainer_Color,
+  .primaryContainer_Color {
+    display: none;
+  }
+}
