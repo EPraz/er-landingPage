@@ -1,40 +1,67 @@
 import image_1 from "../assets/img/image-1.jpg";
 import image_2 from "../assets/img/image-2.jpg";
 import image_3 from "../assets/img/image-3.png";
-import image_4 from "../assets/img/image-4.jpg";
-import image_5 from "../assets/img/image-5.jpg";
 import { MenuProps } from "../types/menuProps";
 
-export const randomList = [
+export type randomListProps = {
+  title: string;
+  description: string;
+};
+
+export const randomList: randomListProps[] = [
   {
-    city: "Panama",
-    list: [
-      { title: "The north", src: image_1 },
-      { title: "The north east", src: image_2 },
-      { title: "The center", src: image_3 },
-      { title: "The east", src: image_4 },
-      { title: "The south", src: image_5 },
-    ],
+    title: "Xana",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
   },
   {
-    city: "Colon",
-    list: [
-      { title: "1", src: image_5 },
-      { title: "2", src: image_3 },
-      { title: "3", src: image_2 },
-      { title: "4", src: image_1 },
-      { title: "5", src: image_4 },
-    ],
+    title: "Juana",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
   },
   {
-    city: "Chiriqui",
-    list: [
-      { title: "1", src: image_4 },
-      { title: "2", src: image_3 },
-      { title: "3", src: image_2 },
-      { title: "4", src: image_5 },
-      { title: "5", src: image_1 },
-    ],
+    title: "Marihuana",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
+  },
+  {
+    title: "Wanda",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
+  },
+  {
+    title: "Aasdcasdc",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
+  },
+  {
+    title: "The south",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
+  },
+  {
+    title: "The sur",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
+  },
+  {
+    title: "The sun",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
+  },
+  {
+    title: "The sour",
+    description: `Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica`,
   },
 ];
 
