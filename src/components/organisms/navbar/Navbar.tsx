@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Logo from "../../../assets/img/emblema.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { HashLink  } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 import "./Navbar.css";
 import { Box } from "@mui/material";

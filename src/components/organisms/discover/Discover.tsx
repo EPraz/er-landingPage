@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { superList } from "../../../utils/constants";
+import { discoverList, superList } from "../../../utils/constants";
 import PlayCircleFilledOutlinedIcon from "@mui/icons-material/PlayCircleFilledOutlined";
 import PlayCircleOutlineRoundedIcon from "@mui/icons-material/PlayCircleOutlineRounded";
 import "./discover.css";
@@ -26,63 +26,67 @@ export const Discover = () => {
   };
 
   return (
-    <Box className="discoverContainer" id="quienesSomos">
-      <Box
-        className="primaryContainer_Color"
-        style={{
-          backgroundColor: discoverData.primaryColor,
-        }}
-      />
-      <Box
-        className="secondaryContainer_Color"
-        style={{ backgroundColor: discoverData.secondaryColor }}
-      />
-
-      <Box className="mainContainer">
+    <Box id="grupos" className="discoverContainer">
+      <div className="bg-white flex w-full p-8">
         <Box
-          className="primaryContainer_Content transtionAnimation"
+          className="primaryContainer_Color rounded-md"
           style={{
-            color: discoverData.primaryColor !== "white" ? "#fff" : "#000",
+            backgroundColor: discoverData.primaryColor,
           }}
-        >
-          <h5>{discoverData.title}</h5>
-          <p>{discoverData.description}</p>
-        </Box>
+        />
+        <Box
+          className="secondaryContainer_Color rounded-md"
+          style={{ backgroundColor: discoverData.secondaryColor }}
+        />
 
-        <Box className="secondaryContainer_Content">
-          <Box className="title">
-            <p>
-              01 | <b>Discover</b>
-            </p>
+        <Box className="mainContainer ">
+          <Box
+            className="primaryContainer_Content transtionAnimation"
+            style={{
+              color: discoverData.primaryColor !== "white" ? "#fff" : "#000",
+            }}
+          >
+            <h5 className="pr-14">{discoverData.title}</h5>
+            <h2 className="pt-4 pr-14">{discoverData.age}</h2>
+            <p className="pr-14 mt-4 text-center">{discoverData.description}</p>
           </Box>
-          {/*  */}
-          <Box className="image fade-in-image">
-            <img src={discoverData.img} />
-          </Box>
-          {/*  */}
-          <Box className={"buttons transtionAnimation"}>
-            <PlayCircleOutlineRoundedIcon
-              className="transtionAnimation"
-              sx={{
-                rotate: "180deg",
-                width: "35px",
-                height: "35px",
-                fill: discoverData.primaryColor,
-              }}
-              onClick={handlePrev}
-            />
-            <PlayCircleFilledOutlinedIcon
-              className="transtionAnimation"
-              sx={{
-                fill: discoverData.primaryColor,
-                height: "35px",
-                width: "35px",
-              }}
-              onClick={handleNext}
-            />
+
+          <Box className="secondaryContainer_Content">
+            <Box className="title">
+              <p>
+                <b></b>
+              </p>
+            </Box>
+            {/*  */}
+            <Box className="image fade-in-image">
+              {" "}
+              <img className="object-cover" src={discoverData.img} />
+            </Box>
+            {/*  */}
+            <Box className={"buttons transtionAnimation"}>
+              <PlayCircleOutlineRoundedIcon
+                className="transtionAnimation"
+                sx={{
+                  rotate: "180deg",
+                  width: "35px",
+                  height: "35px",
+                  fill: discoverData.primaryColor,
+                }}
+                onClick={handlePrev}
+              />
+              <PlayCircleFilledOutlinedIcon
+                className="transtionAnimation"
+                sx={{
+                  fill: discoverData.primaryColor,
+                  height: "35px",
+                  width: "35px",
+                }}
+                onClick={handleNext}
+              />
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </div>
     </Box>
   );
 };

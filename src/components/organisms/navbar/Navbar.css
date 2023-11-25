@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   height: 90px;
   width: 100%;
   top: 0;
@@ -10,7 +10,7 @@
 }
 
 .header-bg {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: transparent;
 }
 
 .header .navbar {
@@ -52,6 +52,7 @@
 
 @media screen and (max-width: 940px) {
   .header {
+    position: fixed;
     max-width: 100%;
     /* background-color: rgba(0, 0, 0, 0.9); */
     background-color: rgba(0, 0, 0, 1);
