@@ -14,52 +14,54 @@ function Carousel() {
   };
 
   return (
-    <Box className="carousel">
-      <Box className="content">
-        <Box className="carousel-controls" gap={1.5}>
-          <Typography variant="h5">Find Your Destination</Typography>
-          {carouselData.list.map(({ title, src }, index) => (
-            <Button
-              key={index}
-              onClick={() => setSelectedItem(index)}
-              sx={{
-                color: selectedItem === index ? "red" : "#000",
-              }}
-              className="button-carousel"
-            >
-              {title}
-            </Button>
-          ))}
-        </Box>
-        <Box className="carousel-container">
-          {carouselData.list.map(({ title, src }, index) => (
-            <div key={index} className={adjustCarouselClass(index)}>
-              <img src={src} alt={`Carousel item ${index + 1}`} />
-            </div>
-          ))}
-        </Box>
-
-        <Box className="carousel-controls" gap={2}>
-          <Typography variant="h5">Choose your city</Typography>
-          {randomList.map(
-            (
-              item: { city: string; list: { title: string; src: string }[] },
-              index
-            ) => (
+    <Box id="programa" className="carousel p-8 bg-white">
+      <div className="bg-gray-600 flex w-full rounded-md">
+        <Box className="content">
+          <Box className="carousel-controls" gap={1.5}>
+            <Typography variant="h5">Find Your Destination</Typography>
+            {carouselData.list.map(({ title, src }, index) => (
               <Button
                 key={index}
-                onClick={() => setCarouselData(item)}
+                onClick={() => setSelectedItem(index)}
                 sx={{
-                  color: carouselData.city === item.city ? "orange" : "#000",
+                  color: selectedItem === index ? "red" : "#000",
                 }}
                 className="button-carousel"
               >
-                {item.city}
+                {title}
               </Button>
-            )
-          )}
+            ))}
+          </Box>
+          <Box className="carousel-container">
+            {carouselData.list.map(({ title, src }, index) => (
+              <div key={index} className={adjustCarouselClass(index)}>
+                <img src={src} alt={`Carousel item ${index + 1}`} />
+              </div>
+            ))}
+          </Box>
+
+          <Box className="carousel-controls" gap={2}>
+            <Typography variant="h5">Choose your city</Typography>
+            {randomList.map(
+              (
+                item: { city: string; list: { title: string; src: string }[] },
+                index
+              ) => (
+                <Button
+                  key={index}
+                  onClick={() => setCarouselData(item)}
+                  sx={{
+                    color: carouselData.city === item.city ? "orange" : "#000",
+                  }}
+                  className="button-carousel"
+                >
+                  {item.city}
+                </Button>
+              )
+            )}
+          </Box>
         </Box>
-      </Box>
+      </div>
     </Box>
   );
 }

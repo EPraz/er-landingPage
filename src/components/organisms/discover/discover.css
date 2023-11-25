@@ -1,7 +1,7 @@
 .discoverContainer {
   height: 100vh;
-  max-height: 800px;
-  min-height: 650px;
+  max-height: 900px;
+  min-height: 680px;
   width: 100%;
   -webkit-transition: background-color 2s ease-out;
   -moz-transition: background-color 2s ease-out;
@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  background-color: white;
 }
 
 .primaryContainer_Color,
@@ -24,6 +25,14 @@
   -moz-transition: background-color 2s ease-out;
   -o-transition: background-color 2s ease-out;
   transition: background-color 2s ease-out;
+}
+
+.primaryContainer_Content {
+  padding-right: 0px;
+}
+
+.primaryContainer_Content h5 {
+  font-size: 35px;
 }
 
 .primaryContainer_Content,
@@ -69,8 +78,8 @@
 .secondaryContainer_Content .image {
   flex: 5;
   width: 100%;
-  height: 250px;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
+  height: 495px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 10;
   margin-right: 50px;

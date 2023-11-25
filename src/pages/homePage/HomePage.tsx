@@ -6,6 +6,10 @@ import {
   Footer,
   HeroSection,
   Navbar,
+  Form,
+  Org,
+  About,
+  News,
 } from "../../components/organisms";
 
 const HomePage = () => {
@@ -14,8 +18,12 @@ const HomePage = () => {
       {/* <Layout> */}
       <Navbar />
       <HeroSection />
+      <News />
+      <About />
       <Discover />
       <Carousel />
+      <Org />
+      <Form />
       <Footer />
       {/* </Layout> */}
     </>
