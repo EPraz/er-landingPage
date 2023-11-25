@@ -85,7 +85,7 @@
   margin-right: 50px;
 }
 .secondaryContainer_Content .image img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
 }

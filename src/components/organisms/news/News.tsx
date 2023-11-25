@@ -34,8 +34,9 @@ function Slider() {
   };
 
   return (
-    <div className=" w-full mx-auto  bg-white">
-      <div className="max-w-[1400px] h-[500px] w-full m-auto py-1 px-1 relative group">
+    <div className=" w-full mx-auto  bg-white p-4">
+      {/* <div className="max-w-[1400px] h-[500px] w-full m-auto py-1 px-1 relative group"> */}
+      <div className=" h-[500px] w-full m-auto py-1 px-1 relative group">
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
           className="w-full h-full rounded-md bg-center bg-cover duration-500"

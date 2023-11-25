@@ -164,3 +164,63 @@ export const discoverList = [
     description: "text here some lorem ipsum",
   },
 ];
+
+export const fields = [
+  {
+    label: "Nombre",
+    type: "text",
+    placeholder: "",
+    required: true,
+    gridCols: 1,
+  },
+
+  {
+    label: "Apellido",
+    type: "text",
+    placeholder: "",
+    required: true,
+    gridCols: 1,
+  },
+  {
+    label: "Cedula",
+    type: "text",
+    placeholder: "",
+    required: true,
+    gridCols: 1,
+  },
+  {
+    label: "Edad",
+    type: "number",
+    placeholder: "",
+    required: true,
+    gridCols: 1,
+  },
+  {
+    label: "Numero de telefono",
+    type: "text",
+    placeholder: "",
+    required: false,
+    gridCols: 2,
+  },
+  {
+    label: "Nombre del Padre",
+    type: "text",
+    placeholder: "",
+    required: false,
+    gridCols: 2,
+  },
+  {
+    label: "Nombre de la madre",
+    type: "text",
+    placeholder: "",
+    required: false,
+    gridCols: 2,
+  },
+  {
+    label: "Iglesia a la que asiste",
+    type: "text",
+    placeholder: "",
+    required: true,
+    gridCols: 2,
+  },
+];

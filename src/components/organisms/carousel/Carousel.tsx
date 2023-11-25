@@ -18,58 +18,122 @@ function Carousel() {
   };
 
   return (
-    <Box id="programa" className="carousel p-8 bg-white">
-      <div className="bg-gray-600 flex w-full rounded-md">
-        <Box className="content">
+    <Box className="carousel">
+      <Box className="content">
+        <Box
+          className="carousel-controls"
+          gap={1.5}
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
+          <Typography variant="h5">Find Your Destination</Typography>
+          {carouselData
+            .slice(0, 4)
+            .map((item: randomListProps, index: number) => (
+              <Button
+                key={index}
+                onClick={() => setSelectedItem(index)}
+                sx={{
+                  ":focus": { outline: "none" },
+                  color: selectedItem === index ? "red" : "#000",
+                }}
+                className="button-carousel"
+              >
+                {item.title}
+              </Button>
+            ))}
+        </Box>
+        <Box
+          className="carousel-controls"
+          gap={1.5}
+          sx={{
+            display: { xs: "flex", md: "none" },
+            flexDirection: "column",
+          }}
+        >
+          <Typography variant="h5" sx={{ display: "block" }}>
+            Find Your Destination
+          </Typography>
           <Box
-            className="carousel-controls"
-            gap={1.5}
-            sx={{ display: { xs: "none", md: "flex" } }}
+            sx={{
+              flexWrap: "wrap",
+              width: "90%",
+              margin: "auto",
+              flexDirection: "row",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <Typography variant="h5">Find Your Destination</Typography>
-            {carouselData.list.map(({ title, src }, index) => (
+            {carouselData.map((item: randomListProps, index: number) => (
               <Button
                 key={index}
                 onClick={() => setSelectedItem(index)}
                 sx={{
                   color: selectedItem === index ? "red" : "#000",
+                  flexWrap: "wrap",
+                  width: "fit-content",
+                  display: "flex",
                 }}
-                className="button-carousel"
               >
-                {title}
+                {item.title}
               </Button>
             ))}
           </Box>
-          <Box className="carousel-container">
-            {carouselData.list.map(({ title, src }, index) => (
-              <div key={index} className={adjustCarouselClass(index)}>
-                <img src={src} alt={`Carousel item ${index + 1}`} />
-              </div>
-            ))}
-          </Box>
+        </Box>
+        <Box className="carousel-container">
+          {carouselData.map((item: randomListProps, index: number) => (
+            <Card
+              key={index}
+              sx={{ maxWidth: 345 }}
+              className={adjustCarouselClass(index)}
+            >
+              <CardContent
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "20px",
+                }}
+              >
+                <Typography gutterBottom variant="h5" component="div">
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {item.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
 
-          <Box className="carousel-controls" gap={2}>
-            <Typography variant="h5">Choose your city</Typography>
-            {randomList.map(
-              (
-                item: { city: string; list: { title: string; src: string }[] },
-                index
-              ) => (
+        <Box
+          className="carousel-controls"
+          gap={1.5}
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
+          <Typography variant="h5">Find Your Destination</Typography>
+          {carouselData
+            .slice(4, 8)
+            .map(
+              (item: { title: string; description: string }, index: number) => (
                 <Button
-                  key={index}
-                  onClick={() => setCarouselData(item)}
+                  key={index + 4}
+                  onClick={() => setSelectedItem(index + 4)}
                   sx={{
-                    color: carouselData.city === item.city ? "orange" : "#000",
+                    color: selectedItem === index + 4 ? "red" : "#000",
+                    ":focus": { outline: "none" },
                   }}
                   className="button-carousel"
                 >
-                  {item.city}
+                  {item.title}
                 </Button>
               )
             )}
-          </Box>
         </Box>
-      </div>
+      </Box>
     </Box>
   );
 }

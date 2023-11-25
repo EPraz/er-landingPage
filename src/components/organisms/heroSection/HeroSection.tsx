@@ -14,11 +14,13 @@ const HeroSection = () => {
   return (
     <Box className="hero" id="home">
       <Box className="content">
-        <Box>
+        <Box sx={{ width: "100%", textAlign: "left" }}>
           <Typography variant="body1" className="subTitle">
             Exploradores del Rey
           </Typography>
-          <Typography className="bigTitle">Panama</Typography>
+          <Typography className="bigTitle" sx={{ marginLeft: "137px" }}>
+            Panama
+          </Typography>
         </Box>
         <Box style={{ display: "flex", gap: "10px" }}>
           <Link to={"#link here"}>

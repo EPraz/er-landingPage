@@ -27,66 +27,66 @@ export const Discover = () => {
 
   return (
     <Box id="grupos" className="discoverContainer">
-      <div className="bg-white flex w-full p-8">
+      {/* <div className="bg-white flex w-full p-8"> */}
+      <Box
+        className="primaryContainer_Color rounded-md"
+        style={{
+          backgroundColor: discoverData.primaryColor,
+        }}
+      />
+      <Box
+        className="secondaryContainer_Color rounded-md"
+        style={{ backgroundColor: discoverData.secondaryColor }}
+      />
+
+      <Box className="mainContainer ">
         <Box
-          className="primaryContainer_Color rounded-md"
+          className="primaryContainer_Content transtionAnimation"
           style={{
-            backgroundColor: discoverData.primaryColor,
+            color: discoverData.primaryColor !== "white" ? "#fff" : "#000",
           }}
-        />
-        <Box
-          className="secondaryContainer_Color rounded-md"
-          style={{ backgroundColor: discoverData.secondaryColor }}
-        />
+        >
+          <h5 className="pr-14">{discoverData.title}</h5>
+          <h2 className="pt-4 pr-14">{discoverData.age}</h2>
+          <p className="pr-14 mt-4 text-center">{discoverData.description}</p>
+        </Box>
 
-        <Box className="mainContainer ">
-          <Box
-            className="primaryContainer_Content transtionAnimation"
-            style={{
-              color: discoverData.primaryColor !== "white" ? "#fff" : "#000",
-            }}
-          >
-            <h5 className="pr-14">{discoverData.title}</h5>
-            <h2 className="pt-4 pr-14">{discoverData.age}</h2>
-            <p className="pr-14 mt-4 text-center">{discoverData.description}</p>
+        <Box className="secondaryContainer_Content">
+          <Box className="title">
+            <p>
+              <b></b>
+            </p>
           </Box>
-
-          <Box className="secondaryContainer_Content">
-            <Box className="title">
-              <p>
-                <b></b>
-              </p>
-            </Box>
-            {/*  */}
-            <Box className="image fade-in-image">
-              {" "}
-              <img className="object-cover" src={discoverData.img} />
-            </Box>
-            {/*  */}
-            <Box className={"buttons transtionAnimation"}>
-              <PlayCircleOutlineRoundedIcon
-                className="transtionAnimation"
-                sx={{
-                  rotate: "180deg",
-                  width: "35px",
-                  height: "35px",
-                  fill: discoverData.primaryColor,
-                }}
-                onClick={handlePrev}
-              />
-              <PlayCircleFilledOutlinedIcon
-                className="transtionAnimation"
-                sx={{
-                  fill: discoverData.primaryColor,
-                  height: "35px",
-                  width: "35px",
-                }}
-                onClick={handleNext}
-              />
-            </Box>
+          {/*  */}
+          <Box className="image fade-in-image">
+            {" "}
+            <img className="" src={discoverData.img} />
+          </Box>
+          {/*  */}
+          <Box className={"buttons transtionAnimation"}>
+            <PlayCircleOutlineRoundedIcon
+              className="transtionAnimation"
+              sx={{
+                rotate: "180deg",
+                width: "35px",
+                height: "35px",
+                fill: discoverData.primaryColor,
+              }}
+              onClick={handlePrev}
+            />
+            <PlayCircleFilledOutlinedIcon
+              className="transtionAnimation"
+              sx={{
+                fill: discoverData.primaryColor,
+                height: "35px",
+                width: "35px",
+              }}
+              onClick={handleNext}
+            />
           </Box>
         </Box>
-      </div>
+      </Box>
+      {/* </div> */}
     </Box>
   );
 };

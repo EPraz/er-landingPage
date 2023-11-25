@@ -2,66 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
 import Recluta from "../../../assets/img/recluta.png";
-
-const fields = [
-  {
-    label: "Nombre",
-    type: "text",
-    placeholder: "",
-    required: true,
-    gridCols: 1,
-  },
-
-  {
-    label: "Apellido",
-    type: "text",
-    placeholder: "",
-    required: true,
-    gridCols: 1,
-  },
-  {
-    label: "Cedula",
-    type: "text",
-    placeholder: "",
-    required: true,
-    gridCols: 1,
-  },
-  {
-    label: "Edad",
-    type: "text",
-    placeholder: "",
-    required: true,
-    gridCols: 1,
-  },
-  {
-    label: "Numero de telefono",
-    type: "text",
-    placeholder: "",
-    required: false,
-    gridCols: 2,
-  },
-  {
-    label: "Nombre del Padre",
-    type: "text",
-    placeholder: "",
-    required: false,
-    gridCols: 2,
-  },
-  {
-    label: "Nombre de la madre",
-    type: "text",
-    placeholder: "",
-    required: false,
-    gridCols: 2,
-  },
-  {
-    label: "Iglesia a la que asiste",
-    type: "text",
-    placeholder: "",
-    required: true,
-    gridCols: 2,
-  },
-];
+import { fields } from "../../../utils/constants";
 
 const Form = () => {
   const {
