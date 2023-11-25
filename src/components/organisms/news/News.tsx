@@ -1,56 +1,67 @@
 import { useState } from "react";
-import s1 from "../../../assets/img/s-1.jpg";
-import s2 from "../../../assets/img/s-2.jpg";
-import s3 from "../../../assets/img/s-3.png";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { RxDotFilled } from "react-icons/rx";
 
-const images = [s1, s2, s3];
+function Slider() {
+  const slides = [
+    {
+      url: "./src/assets/img/s-1.jpg",
+    },
+    {
+      url: "./src/assets/img/s-2.jpg",
+    },
+    {
+      url: "./src/assets/img/s-3.png",
+    },
+  ];
 
-const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
-    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % images.length;
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
 
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
   return (
-    <div className="relative w-full max-w-screen-lg mx-auto overflow-hidden">
-      <div className="flex">
-        <button
-          onClick={prevSlide}
-          className="flex items-center justify-center w-1/12 h-12 bg-gray-300"
-        >
-          {"<"}
-        </button>
-        <div className="w-10/12 overflow-hidden">
-          <div
-            className="flex transition-transform duration-300"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {images.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`slide ${index + 1}`}
-                className="w-full"
-              />
-            ))}
-          </div>
+    <div className=" w-full mx-auto  bg-white">
+      <div className="max-w-[1400px] h-[500px] w-full m-auto py-1 px-1 relative group">
+        <div
+          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          className="w-full h-full rounded-md bg-center bg-cover duration-500"
+        ></div>
+
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+          <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
-        <button
-          onClick={nextSlide}
-          className="flex items-center justify-center w-1/12 h-12 bg-gray-300"
-        >
-          {">"}
-        </button>
+
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+          <BsChevronCompactRight onClick={nextSlide} size={30} />
+        </div>
+        <div className="flex top-4 justify-center py-2">
+          {slides.map((slide, slideIndex) => (
+            <div
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className="text-2xl cursor-pointer"
+            >
+              <RxDotFilled />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default Slider;
