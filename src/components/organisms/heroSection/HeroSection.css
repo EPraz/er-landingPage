@@ -2,10 +2,10 @@
   background-color: var(--overlay);
   color: #fff;
   height: 100vh;
-  max-height: 800px;
+  /* max-height: 800px; */
   width: 100%;
   position: relative;
-  min-height: 650px;
+  /* min-height: 650px; */
 }
 
 .hero:before {

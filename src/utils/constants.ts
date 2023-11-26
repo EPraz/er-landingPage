@@ -8,63 +8,87 @@ import { MenuProps } from "../types/menuProps";
 export type randomListProps = {
   title: string;
   description: string;
+  details?: { bullet: string; definition: string }[];
 };
 
 export const randomList: randomListProps[] = [
   {
-    title: "Xana",
+    title: "Misión",
+    description: `La Mision de los exploradores del rey es evangelizar, equipar y empoderar a la nueva generacion de lideres siervos`,
+  },
+  {
+    title: "Promesa",
+    description: `Prometo que con la ayuda de Dios me esforzare para servir a Dios a mi iglesia y a mi semejantes, vivir segun el codigo de los exploradores del rey y hacer de la consigna mi regla diaria`,
+  },
+  {
+    title: "Emblema",
     description: `Lizards are a widespread group of squamate reptiles, with
                     over 6,000 species, ranging across all continents except
                     Antarctica`,
   },
   {
-    title: "Juana",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
+    title: "Consigna",
+    description: `Asi que todo lo que querais que los hombres hagan con vosotros asi tambien haced vosotros con ellos Mateo 7:12`,
+  },
+
+  {
+    title: "Código",
+    description: `Un explorador del rey es :`,
+    details: [
+      {
+        bullet: "Alerta",
+        definition: " está alerta en el aspecto físico, mental y espiritual.",
+      },
+      {
+        bullet: "Limpio",
+        definition: "es limpio en lo relativo al cuerpo, mente y palabras.",
+      },
+      {
+        bullet: "Honrado",
+        definition: "no miente, ni engaña, ni roba.",
+      },
+      {
+        bullet: "Valiente",
+        definition: "es valiente a pesar de los peligros, críticas y amenazas.",
+      },
+      {
+        bullet: "Leal",
+        definition: "es leal a su iglesia, familia, destacamento y amigos.",
+      },
+      {
+        bullet: "Cortés",
+        definition: "es amable, bondadoso y solícito.",
+      },
+      {
+        bullet: "Obediente",
+        definition:
+          "es obediente a sus padres, líderes y todos aquellos que ejercen autoridad.",
+      },
+      {
+        bullet: "Espiritual",
+        definition: "ora, lee la Biblia y testifica.",
+      },
+    ],
   },
   {
-    title: "Marihuana",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
+    title: "Lema",
+    description: `Preparado para todo! preparado para trabajar, jugar, servir, adorar, vivir y obedecer la palabra de Dios.`,
+  },
+
+  {
+    title: "Juramento Cristiano",
+    description: `Bandera cristiana insignia de amor tu cruz hoy nos habla de un mundo mejor a ti te prometo en sombras y en luz, ser un mensajero del tierno Jesús.`,
   },
   {
-    title: "Wanda",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
+    title: "Moral",
+    description: `¿Como esta su moral? Alta, altísima, a cien mil metros de altura, el explorador no nace se hace, lo posible esta hecho, lo imposible lo se esta por hacer ¡¡¡SEÑOR!!!`,
   },
-  {
-    title: "Aasdcasdc",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
-  },
-  {
-    title: "The south",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
-  },
-  {
-    title: "The sur",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
-  },
-  {
-    title: "The sun",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
-  },
-  {
-    title: "The sour",
-    description: `Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica`,
-  },
+  // {
+  //   title: "The sour",
+  //   description: `Lizards are a widespread group of squamate reptiles, with
+  //                   over 6,000 species, ranging across all continents except
+  //                   Antarctica`,
+  // },
 ];
 
 export const superList = [

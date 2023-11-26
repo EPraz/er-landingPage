@@ -3,7 +3,7 @@ import React from "react";
 const Org = () => {
   return (
     <div id="org" className="p-5 w-full mx-auto p-8 bg-white">
-      <div className="bg-gray-300 p-2 rounded-md">
+      <div className="bg-gray-300 p-10 rounded-md">
         <div className="text-center  text-gray-700 mt-4 mb-10">
           <h1 className="lg:text-5xl font-serif text-gray-800 text-3xl">
             Nuestra Organizacion Nacional

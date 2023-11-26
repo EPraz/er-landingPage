@@ -18,14 +18,17 @@ function Carousel() {
   };
 
   return (
-    <Box className="carousel">
+    <Box className="carousel p-10">
+      <h1 className="lg:text-5xl font-serif text-gray-800 text-3xl">
+        Estructura del Programa
+      </h1>
       <Box className="content">
         <Box
           className="carousel-controls"
           gap={1.5}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
-          <Typography variant="h5">Find Your Destination</Typography>
+          {/* <Typography variant="h5">Find Your Destination</Typography> */}
           {carouselData
             .slice(0, 4)
             .map((item: randomListProps, index: number) => (
@@ -50,9 +53,9 @@ function Carousel() {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h5" sx={{ display: "block" }}>
+          {/* <Typography variant="h5" sx={{ display: "block" }}>
             Find Your Destination
-          </Typography>
+          </Typography> */}
           <Box
             sx={{
               flexWrap: "wrap",
@@ -101,8 +104,21 @@ function Carousel() {
                 <Typography gutterBottom variant="h5" component="div">
                   {item.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="black">
                   {item.description}
+                  {item.details &&
+                    item.details.map(
+                      (
+                        value: { bullet: string; definition: string },
+                        index
+                      ) => (
+                        <ul key={index}>
+                          <Typography sx={{ fontSize: "18px" }}>
+                            {value.bullet}
+                          </Typography>
+                        </ul>
+                      )
+                    )}
                 </Typography>
               </CardContent>
             </Card>
@@ -114,7 +130,7 @@ function Carousel() {
           gap={1.5}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
-          <Typography variant="h5">Find Your Destination</Typography>
+          {/* <Typography variant="h5">Find Your Destination</Typography> */}
           {carouselData
             .slice(4, 8)
             .map(
