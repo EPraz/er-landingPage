@@ -26,7 +26,7 @@ export const Discover = () => {
   };
 
   return (
-    <Box id="grupos" className="discoverContainer">
+    <Box id="grupos" className="discoverContainer p-10">
       {/* <div className="bg-white flex w-full p-8"> */}
       <Box
         className="primaryContainer_Color rounded-md"
